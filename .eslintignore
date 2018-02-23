@@ -1,0 +1,24 @@
+################################################
+#   ╔═╗╔═╗╦  ╦╔╗╔╔╦╗┬┌─┐┌┐┌┌─┐┬─┐┌─┐
+#   ║╣ ╚═╗║  ║║║║ ║ ││ ┬││││ │├┬┘├┤
+#  o╚═╝╚═╝╩═╝╩╝╚╝ ╩ ┴└─┘┘└┘└─┘┴└─└─┘
+#
+# > Glob patterns indicating files/directories
+# > to exclude when checking code quality with
+# > eslint.
+#
+# This file (`.eslintignore`) is only relevant
+# if you are using eslint.
+#
+# It exists to signify to eslint that certain
+# files and/or directories should be ignored for
+# the purposes of linting -- e.g. because they
+# are already minified, or external dependencies,
+# contain inline JavaScript within an HTML template,
+# etc.
+#
+# Modify/extend/prune to fit your needs!
+#
+################################################
+
+
