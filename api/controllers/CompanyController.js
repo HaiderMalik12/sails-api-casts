@@ -1,29 +1,32 @@
 module.exports = {
 
-  create(req,res){
-
-    //get the name from the req params
-
-     //get the city from the req params
-
-    //get the address from req params
-
-   //create a new record in Company
-
-   //use create method from Companty model
-
-   //return the newly created Company with 200 status
-  },
-  find(req,res){
-
-  },
-  findOne(req,res){
+  create(req, res){
+    let params = req.allParams();
+    if (!params.name) {
+      return res.badRequest({err: 'name is required field'});
+    }
+    Company.create({
+      name: params.name,
+      city: params.city,
+      address: params.address
+    }, (err, results) => {
+      if (err) {
+        return res.serverError(err);
+      }
+      return res.ok(results);
+    });
 
   },
-  update(req,res){
+  find(req, res){
 
   },
-  delete(req,res){
+  findOne(req, res){
+
+  },
+  update(req, res){
+
+  },
+  delete(req, res){
 
   }
 
