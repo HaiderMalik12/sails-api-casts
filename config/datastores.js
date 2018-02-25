@@ -31,7 +31,12 @@ module.exports.datastores = {
    * (For production configuration, see `config/env/production.js`.)          *
    *                                                                          *
    ***************************************************************************/
-
+  // adapter: 'sails-mysql',
+  // user: 'root',
+  // password: 'root',
+  // port: '3306',
+  // host: 'localhost',
+  // database: 'portal_db'
   default: {
 
     /***************************************************************************
@@ -50,10 +55,8 @@ module.exports.datastores = {
      ***************************************************************************/
     // adapter: 'sails-mysql',
     // url: 'mysql://user:password@host:port/database',
-    adapter: 'sails-mysql',
-    user: 'root',
-    password: 'root',
-    port: '3306',
+    adapter: 'sails-mongo',
+    port: '27017',
     host: 'localhost',
     database: 'portal_db'
 

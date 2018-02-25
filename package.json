@@ -10,6 +10,7 @@
     "sails": "^1.0.0-45",
     "sails-hook-orm": "^2.0.0-16",
     "sails-hook-sockets": "^1.4.0",
+    "sails-mongo": "^1.0.0-11",
     "sails-mysql": "^1.0.0-17"
   },
   "devDependencies": {
