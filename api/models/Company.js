@@ -9,6 +9,12 @@ module.exports = {
     },
     address: {
       type: 'string'
+    },
+
+    //Assocication
+    jobs: {
+      collection: 'Job',
+      via: 'company'
     }
   }
 };

@@ -11,7 +11,7 @@ module.exports = {
    */
   create: async function (req, res) {
     try {
-      let {title, description, salary, position} = req.allParams();
+      let {title, description, salary, position, companyId} = req.allParams();
       if (!title) {
         return res.badRequest({err: 'title is required field'});
       }
@@ -21,7 +21,7 @@ module.exports = {
       const jobDetail = await JobDetail.create({
         description, salary, position
       }).fetch();
-      const job = await Job.create({title, jobDetail: jobDetail.id}).fetch();
+      const job = await Job.create({title, jobDetail: jobDetail.id, company: companyId}).fetch();
       return res.ok(job);
     }
     catch (err){
@@ -34,7 +34,9 @@ module.exports = {
    */
   find: async function (req, res) {
     try{
-      const jobs = await Job.find({where:{title: 'Nodejs developer'}}).populate('jobDetail');
+      const jobs = await Job.find({})
+        .populate('jobDetail')
+        .populate('company');
       return res.ok(jobs);
     }
     catch (err){
