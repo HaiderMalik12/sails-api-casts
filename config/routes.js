@@ -31,7 +31,11 @@ module.exports.routes = {
   'GET /companies' : 'CompanyController.find',
   'GET /companies/:id' : 'CompanyController.findOne',
   'PATCH /companies/:id' : 'CompanyController.update',
-  'DELETE /companies/:id' : 'CompanyController.delete'
+  'DELETE /companies/:id' : 'CompanyController.delete',
+
+
+  //Jobs
+  'POST /jobs' : 'JobController.create'
 
 
 
