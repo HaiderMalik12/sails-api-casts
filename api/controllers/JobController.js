@@ -36,7 +36,8 @@ module.exports = {
     try{
       const jobs = await Job.find({})
         .populate('jobDetail')
-        .populate('company');
+        .populate('company')
+        .populate('candidates');
       return res.ok(jobs);
     }
     catch (err){
