@@ -35,7 +35,8 @@ module.exports.routes = {
 
 
   //Jobs
-  'POST /jobs' : 'JobController.create'
+  'POST /jobs' : 'JobController.create',
+  'GET /jobs' : 'JobController.find',
 
 
 

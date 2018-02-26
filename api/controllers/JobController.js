@@ -33,9 +33,13 @@ module.exports = {
    * `JobController.find()`
    */
   find: async function (req, res) {
-    return res.json({
-      todo: 'find() is not implemented yet!'
-    });
+    try{
+      const jobs = await Job.find({where:{title: 'Nodejs developer'}}).populate('jobDetail');
+      return res.ok(jobs);
+    }
+    catch (err){
+      return res.serverError(err);
+    }
   }
 
 };
