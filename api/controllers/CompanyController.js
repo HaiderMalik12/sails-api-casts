@@ -21,8 +21,9 @@ module.exports = {
   },
   async find(req, res){
     try {
-      const companies = await Company.find();
-      return res.ok(companies)
+      const companies = await Company.find()
+        .populate('jobs');
+      return res.ok(companies);
     }
     catch (err) {
       return res.serverError(err);
