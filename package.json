@@ -6,6 +6,7 @@
   "keywords": [],
   "dependencies": {
     "async": "2.0.1",
+    "bcrypt": "^1.0.3",
     "joi": "^13.1.2",
     "lodash": "3.10.1",
     "sails": "^1.0.0-45",

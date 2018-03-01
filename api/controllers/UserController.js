@@ -15,17 +15,13 @@ module.exports = {
         email: Joi.string().required().email(),
         password: Joi.string().required()
       });
-      //validate the email and password
       const {email, password} = await Joi.validate(req.allParams(), schema);
-
-      //create a new user
-      const user = await User.create({
+      const encryptedPassword = await UtilService.hashPassword(password);
+      const results = await User.create({
         email,
-        password
-      })
-        .fetch();
-      //send the new user in response
-      return res.ok(user);
+        password: encryptedPassword
+      });
+      return res.ok(results);
     }
     catch (err) {
       if (err.name === 'ValidationError') {
