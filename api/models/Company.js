@@ -15,6 +15,11 @@ module.exports = {
     jobs: {
       collection: 'Job',
       via: 'company'
+    },
+    user:{
+      model: 'user',
+      columnName: 'userId',
+      required:true
     }
   }
 };
