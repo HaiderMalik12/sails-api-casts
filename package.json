@@ -6,6 +6,7 @@
   "keywords": [],
   "dependencies": {
     "async": "2.0.1",
+    "joi": "^13.1.2",
     "lodash": "3.10.1",
     "sails": "^1.0.0-45",
     "sails-hook-orm": "^2.0.0-16",
@@ -21,7 +22,7 @@
     "test": "npm run lint && npm run custom-tests && echo 'Done.'",
     "lint": "node ./node_modules/eslint/bin/eslint . --max-warnings=0 --report-unused-disable-directives && echo '✔  Your code looks good.'",
     "custom-tests": "echo \"(No other custom tests yet.)\" && echo",
-    "dev" : "nodemon app.js"
+    "dev": "nodemon app.js"
   },
   "main": "app.js",
   "repository": {
